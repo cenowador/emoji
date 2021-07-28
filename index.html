@@ -4,6 +4,7 @@
 <script src="emoji.js"></script>
 </head>
 <body>
+<div>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed venenatis purus sit amet dictum tempus. Proin sed nisl justo. Quisque finibus augue ut urna interdum, eu tincidunt tellus fermentum. Fusce ac augue rhoncus, ☂️ ante tincidunt, luctus sem. Cras facilisis massa nec posuere lacinia. Donec ullamcorper, orci eu luctus laoreet, libero ex mattis libero, sit amet fermentum ipsum augue quis ante. Ut malesuada diam id urna bibendum luctus. Integer at orci quis mauris ornare interdum eu rutrum ex. Fusce volutpat, lorem vel varius facilisis, enim lorem ☎️ velit, et eleifend lacus lectus sed est. Integer ut diam feugiat, consectetur enim sit amet, tincidunt nulla. Sed posuere ex nisi, eget vulputate nisi hendrerit vitae. Donec convallis sem consequat posuere fermentum. Donec commodo suscipit sollicitudin. Duis odio velit, ultrices vel consequat tincidunt, commodo eu purus.
 
 Phasellus sed nibh ☎️, viverra nisi id, suscipit sem. Donec faucibus efficitur imperdiet. Pellentesque viverra leo pulvinar odio pellentesque, non pharetra arcu iaculis. Mauris lorem nisl, tempus in lacus at, scelerisque ☂️ augue. Curabitur eu leo dui. Morbi cursus turpis id neque ultrices pretium. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -13,6 +14,20 @@ Donec facilisis metus in massa sodales, a aliquet ante vestibulum. Suspendisse �
 Donec eget nunc vel est sodales efficitur vel quis ligula. Sed at dolor finibus, pretium nunc at, tincidunt ligula. Donec ornare consectetur libero, id suscipit erat dictum quis. Quisque et justo ac dui vulputate pellentesque. Aliquam eu nisl malesuada, fermentum augue vel, rutrum ipsum. Donec non varius mi. Nulla ut sodales lectus. Ut a arcu nulla. Proin lacus diam, suscipit at massa a, hendrerit mollis magna. Maecenas id pretium neque. Etiam vestibulum ✂️ massa, vitae volutpat nibh ☂️ ut. Pellentesque viverra bibendum fermentum. Curabitur ☎️ ornare justo ut pharetra. Suspendisse sem lacus, porta non ultrices vitae, placerat sit amet est.
 
 Aenean porttitor urna ut tellus sodales, quis congue augue blandit. Nullam bibendum pretium nibh non ullamcorper. Vestibulum suscipit, dui eu ultrices interdum, leo enim aliquam arcu, id viverra orci ligula id ante. Cras sollicitudin interdum porttitor. Duis feugiat viverra nisi. Vivamus vitae dignissim erat. Sed vitae sapien risus. Proin elit augue, convallis quis luctus nec, tempor vel libero. Duis ornare volutpat odio ut pharetra. Nunc at laoreet erat, in placerat urna. Fusce hendrerit, felis quis efficitur elementum, mi risus congue augue, vitae venenatis dui nisi ac dui. Nam eget odio eget diam tempor placerat sed non velit. Cras vitae suscipit sem. Cras lobortis hendrerit ✂️. Sed ornare lacus at placerat ☂️. Mauris mollis aliquam efficitur.
+</div>
+<div id="clickable" style="background: rgb(255, 0, 0); width: 100px; height: 100px;"></div>
+<div id="messages-container"></div>
+<script>
+document.getElementById('clickable').addEventListener('click', function(){
+	this.style.background = 'rgb(0, 0, 255)';
+});
+</script>
+<script>
+var container = document.getElementById('messages-container');
+var newDiv = document.createElement('div');
+newDiv.innerHTML = 'content inserted by Js (must not be duplicated)';
+container.appendChild(newDiv);
+</script>
 <script>loadEmojis();</script>
 </body>
 </html>
